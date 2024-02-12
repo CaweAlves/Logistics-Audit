@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Truck extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'plate_number',
+        'driver_id'
+    ];
 }
