@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('cpf', 11);
+            $table->string('cpf', 11)->unique();
             $table->timestamps();
         });
     }
