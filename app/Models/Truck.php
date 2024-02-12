@@ -10,7 +10,6 @@ class Truck extends Model
     use HasFactory;
 
     protected $fillable = [
-        'plate_number',
-        'driver_id'
+        'license_plate'
     ];
 }
