@@ -12,8 +12,7 @@ return new class extends Migration {
     {
         Schema::create('trucks', function (Blueprint $table) {
             $table->id();
-            $table->string('plate_number', 7)->unique();
-            $table->foreignId('driver_id')->constrained('drivers');
+            $table->string('license_plate', 7)->unique();
             $table->timestamps();
         });
     }
