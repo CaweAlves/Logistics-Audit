@@ -12,4 +12,15 @@ class Cargo extends Model
     protected $fillable = [
         'truck_id'
     ];
+
+    public function truck()
+    {
+        return $this->belongsTo(Truck::class);
+    }
+
+    public function pallets()
+    {
+        return $this->hasMany(Pallets::class);
+    }
+
 }
