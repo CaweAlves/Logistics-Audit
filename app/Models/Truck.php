@@ -10,6 +10,17 @@ class Truck extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'license_plate'
     ];
+
+    public function driver()
+    {
+        return $this->belongsTo(Driver::class);
+    }
+
+    public function cargos()
+    {
+        return $this->hasMany(Cargo::class);
+    }
 }
